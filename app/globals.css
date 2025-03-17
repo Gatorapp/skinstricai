@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Add this CSS to your global styles or the relevant component stylesheet */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+
