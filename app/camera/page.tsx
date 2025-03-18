@@ -46,13 +46,13 @@ const CameraUpload = () => {
         context.drawImage(videoRef.current, 0, 0);
         const imageUrl = canvasRef.current.toDataURL("image/png");
         setPreview(imageUrl);
-        
+
         // Stop the camera and hide the button
         stopCamera();
       }
     }
   };
-  
+
 
   const stopCamera = () => {
     if (videoRef.current && videoRef.current.srcObject) {
@@ -64,9 +64,9 @@ const CameraUpload = () => {
 
   return (
     <>
-  <Header btnOn={true} />
-  <div className="min-h-screen flex flex-col items-center justify-center relative px-4">
-  <div className="flex-1 flex flex-col md:flex-row items-center justify-center relative mb-32 md:mb-60 space-y-12 md:space-y-0 "> 
+      <Header btnOn={true} />
+      <div className="min-h-screen flex flex-col items-center justify-center relative px-4">
+        <div className="flex-1 flex flex-col md:flex-row items-center justify-center relative mb-32 md:mb-60 space-y-12 md:space-y-0 ">
           {/* Camera Scan Box */}
           <div className="relative flex flex-col items-center cursor-pointer mt-48 mr-48" onClick={startCamera}>
             <div className="w-[120px] h-[120px] md:w-[300px] md:h-[300px] border border-dotted border-gray-800 rotate-45 animate-slow-spin"></div>
@@ -108,20 +108,20 @@ const CameraUpload = () => {
 
         {/* Webcam Preview */}
         {isCameraOn && (
-  <div className="absolute top-14 right-14 w-64 h-64 border border-gray-800 rounded-lg overflow-hidden flex flex-col items-center">
-    <video ref={videoRef} autoPlay className="w-full h-full object-cover"></video>
-    
-    {/* Show the button only if the camera is active */}
-    {isCameraOn && (
-      <button 
-        onClick={capturePhoto} 
-        className="mt-2 px-4 py-1 bg-blue-500 text-white rounded"
-      >
-        Capture Photo
-      </button>
-    )}
-  </div>
-)}
+          <div className="absolute top-14 right-14 w-64 h-64 border border-gray-800 rounded-lg overflow-hidden flex flex-col items-center">
+            <video ref={videoRef} autoPlay className="w-full h-full object-cover"></video>
+
+            {/* Show the button only if the camera is active */}
+            {isCameraOn && (
+              <button
+                onClick={capturePhoto}
+                className="mt-2 px-4 py-1 bg-blue-500 text-white rounded"
+              >
+                Capture Photo
+              </button>
+            )}
+          </div>
+        )}
 
 
         {/* Captured Image Preview */}
@@ -133,6 +133,22 @@ const CameraUpload = () => {
 
         {/* Hidden Canvas for Capturing Photo */}
         <canvas ref={canvasRef} className="hidden"></canvas>
+
+        {/* Proceed Button at Bottom Right */}
+        {preview && (
+          <div className="absolute bottom-9 right-16">
+            <div className="flex items-center justify-center gap-4">
+              <button
+                onClick={() => router.push("/preloading")} 
+                className="flex items-center justify-center w-6 h-6 border-2 border-gray-900 transform rotate-45 hover:scale-110 transition-all"
+              >
+                <MdPlayArrow className="rotate-[190deg] text-black text-lg z-10" />
+              </button>
+              <p className="text-xs text-black uppercase font-bold opacity-60">Proceed</p>
+            </div>
+          </div>
+        )}
+
 
         {/* Back Button at Bottom Left */}
         <div className="absolute bottom-9 left-16">
@@ -146,9 +162,9 @@ const CameraUpload = () => {
             <p className="text-xs text-black uppercase font-bold opacity-60">Back</p>
           </div>
         </div>
-        
-    {/* Animation Styles */}
-    <style jsx>{`
+
+        {/* Animation Styles */}
+        <style jsx>{`
       @keyframes slowSpin {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
@@ -165,8 +181,8 @@ const CameraUpload = () => {
       .animate-medium-spin { animation: mediumSpin 5.2s linear infinite; }
       .animate-fast-spin { animation: fastSpin 5s linear infinite; }
     `}</style>
-  </div>
-</>
+      </div>
+    </>
 
   );
 };

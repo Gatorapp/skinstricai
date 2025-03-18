@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ btnOn }) => {
                             fontSize: "clamp(10px, 2px + .625vw, 14px)",
                         }}
                     >
-                        SKINSTRIC  [ INTROs ]
+                        SKINSTRIC  [ INTRO ]
                     </Link>
                 </div>
                 {btnOn && (
