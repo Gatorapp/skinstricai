@@ -116,8 +116,8 @@ function page() {
                         </div>                    
                                     <div className=' pt-4 pb-6 bg-white sticky bottom-40 md:static md:bottom-0 mb-8  md:mb-16'>
                                         <div className='flex justify-between max-w-6xl mx-auto px-4 md:px8'>
-                                        <a className="rotate-45 hover:bg-gray-100 transition-colors w-10 h-10 flex items-center justify-center border border-black" href="/select"><span class="rotate-[-45deg] text-xs font-semibold">Back</span></a>
-                                        <a className="rotate-45 hover:bg-gray-100 transition-colors w-10 h-10 flex items-center justify-center border border-black" href="/"><span class="rotate-[-45deg] text-xs font-semibold">Home</span></a>
+                                        <a className="rotate-45 hover:bg-gray-100 transition-colors w-10 h-10 flex items-center justify-center border border-black" href="/select"><span className="rotate-[-45deg] text-xs font-semibold">Back</span></a>
+                                        <a className="rotate-45 hover:bg-gray-100 transition-colors w-10 h-10 flex items-center justify-center border border-black" href="/"><span className="rotate-[-45deg] text-xs font-semibold">Home</span></a>
                                         </div>
                                     </div>
                     </div>
