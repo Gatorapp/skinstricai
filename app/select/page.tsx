@@ -120,7 +120,7 @@ function Page() {
           >
             <MdPlayArrow className="rotate-[16deg] text-black text-lg z-10" />
           </button>
-          <p className="text-xs text-black uppercase font-bold opacity-60">Back</p>
+          <p className="text-xs text-black uppercase font-bold opacity-60">Back Button</p>
         </div>
       </div>
     </div>
