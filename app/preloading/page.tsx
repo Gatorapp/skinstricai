@@ -8,8 +8,8 @@ const preloading = () => {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      router.push("/testing"); // Redirect to testing page after delay
-    }, 3000); // Adjust time as needed
+      router.push("/select"); 
+    }, 3000); 
 
     return () => clearTimeout(timeout);
   }, [router]);

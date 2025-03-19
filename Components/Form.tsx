@@ -42,7 +42,7 @@ const Form = () => {
   const submitData = async () => {
     try {
       const response = await fetch(
-        "https://us-central1-api-skinstric-ai.cloudfunctions.net/skinstricPhaseOne",
+        "https://us-central1-frontend-simplified.cloudfunctions.net/skinstricPhaseOne",
         {
           method: "POST",
           headers: {
