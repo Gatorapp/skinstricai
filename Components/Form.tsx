@@ -94,12 +94,12 @@ const Form = () => {
       </div>
       {/* Navigation buttons */}
       <div className="absolute bottom-9 flex justify-between w-[80vw] lg:w-[94vw]">
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center cursor-pointer gap-4">
           <div className="flex items-center justify-center gap-4">
             {phase === "location" && (
               <button
                 onClick={() => setPhase("name")}
-                className="relative flex items-center justify-center w-6 h-6 border-2 border-gray-900 transform rotate-45 hover:scale-110 transition-all"
+                className="relative flex items-center justify-center cursor-pointer w-6 h-6 border-2 border-gray-900 transform rotate-45 hover:scale-110 transition-all"
                 title="Back to Name"
               >
                 <MdPlayArrow className="rotate-[135deg] text-black text-lg z-10" />
@@ -121,7 +121,7 @@ const Form = () => {
             <p className="text-xs uppercase font-bold opacity-60">Process</p>
             <button
               onClick={() => setPhase("location")}
-              className="relative flex items-center justify-center w-6 h-6 border-2 border-gray-900 transform rotate-45 hover:scale-110 transition-all"
+              className="relative flex items-center justify-center cursor-pointer w-6 h-6 border-2 border-gray-900 transform rotate-45 hover:scale-110 transition-all"
               title="Proceed to Location"
             >
               <MdPlayArrow className="rotate-[67.5deg] text-black text-lg z-10" />
@@ -134,7 +134,7 @@ const Form = () => {
             <p className="text-xs uppercase font-bold opacity-60">Submit</p>
             <button
               onClick={handleNext}
-              className="relative flex items-center justify-center w-6 h-6 border-2 border-gray-900 transform rotate-45 hover:scale-110 transition-all"
+              className="relative flex items-center justify-center cursor-pointer w-6 h-6 border-2 border-gray-900 transform rotate-45 hover:scale-110 transition-all"
             >
               <MdPlayArrow className="rotate-[67.5deg] text-black text-lg z-10" />
             </button>

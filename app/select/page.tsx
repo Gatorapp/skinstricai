@@ -99,30 +99,30 @@ function Page() {
       )}
 
       {/* Home Button at Bottom Right */}
-      <div className="absolute bottom-9 right-16">
-        <div className="flex items-center justify-center gap-4">
-          <p className="text-xs text-black uppercase font-bold opacity-60">Home</p>
-          <button
-            onClick={() => router.push("/")}
-            className="flex items-center justify-center w-6 h-6 border-2 border-gray-900 transform rotate-310 hover:scale-110 transition-all rounded-lg"
-          >
-            <MdPlayArrow className="rotate-[80deg] text-black text-lg z-10" />
-          </button>
-        </div>
-      </div>
+              <div className="absolute bottom-9 right-16">
+                <div className="flex items-center justify-center gap-4">
+                  <p className="text-xs text-black uppercase font-bold opacity-60">Home</p>
+                  <button
+                    onClick={() => router.back()}
+                    className="flex items-center justify-center w-6 h-6 border-2 border-gray-900 transform rotate-45 hover:scale-110 transition-all"
+                  >
+                    <MdPlayArrow className="rotate-[85deg] text-black text-lg z-10" />
+                  </button>
+                </div>
+              </div>
 
-      {/* Back to Camera Button at Bottom Left */}
-      <div className="absolute bottom-9 left-16">
-        <div className="flex items-center justify-center gap-4">
-          <button
-            onClick={() => router.push("/camera")}
-            className="flex items-center justify-center w-6 h-6 border-2 border-gray-900 transform rotate-45 hover:scale-110 transition-all rounded-lg"
-          >
-            <MdPlayArrow className="rotate-[16deg] text-black text-lg z-10" />
-          </button>
-          <p className="text-xs text-black uppercase font-bold opacity-60">Back</p>
-        </div>
-      </div>
+      {/* Back Button at Bottom Left */}
+              <div className="absolute bottom-9 left-16">
+                <div className="flex items-center justify-center gap-4">
+                  <button
+                    onClick={() => router.back()}
+                    className="flex items-center justify-center w-6 h-6 border-2 border-gray-900 transform rotate-45 hover:scale-110 transition-all"
+                  >
+                    <MdPlayArrow className="rotate-[16deg] text-black text-lg z-10" />
+                  </button>
+                  <p className="text-xs text-black uppercase font-bold opacity-60">Back</p>
+                </div>
+              </div>
     </div>
   );
 }
